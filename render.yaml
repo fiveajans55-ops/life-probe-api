@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: life-probe-api
+    env: dotnet
+    plan: free
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/life-probe-api.dll
